@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeCode - TCS Python Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="roadmaps.css">
+    <link rel="stylesheet" href="python_interview.css">
+</head>
+
+<body>
+    <div class="page-background"></div>
+
+    <nav class="main-nav-bar">
+        <a href="index.html" class="logo">SnakeCode</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="roadmaps.html">Roadmaps</a>
+            <a href="hire_ready.html" class="active">Hire Ready</a>
+        </div>
+    </nav>
+
+    <main class="practice-container">
+        <header class="practice-header">
+            <div class="breadcrumb">
+                <a href="hire_ready.html">Hire Ready</a> / <span>TCS Python</span>
+            </div>
+            <h1 class="glitch" data-text="TCS Practice">TCS Practice</h1>
+            <p>Master TCS Python interview questions with concept-based MCQs.</p>
+        </header>
+
+        <div class="practice-layout">
+            <!-- Level Selection / Sidebar -->
+            <aside class="level-sidebar">
+                <div class="level-card active" data-level="beginner">
+                    <div class="level-info">
+                        <h3>Beginner</h3>
+                        <p>Basics & Syntax</p>
+                    </div>
+                    <div class="level-progress">0/5</div>
+                </div>
+                <div class="level-card" data-level="intermediate">
+                    <div class="level-info">
+                        <h3>Intermediate</h3>
+                        <p>DS & Functions</p>
+                    </div>
+                    <div class="level-progress">0/5</div>
+                </div>
+                <div class="level-card" data-level="advanced">
+                    <div class="level-info">
+                        <h3>Advanced</h3>
+                        <p>OOP & Concepts</p>
+                    </div>
+                    <div class="level-progress">0/5</div>
+                </div>
+                <div class="level-card" data-level="coding">
+                    <div class="level-info">
+                        <h3>Coding</h3>
+                        <p>Problem Solving</p>
+                    </div>
+                    <div class="level-progress">0/5</div>
+                </div>
+            </aside>
+
+            <!-- Quiz Area -->
+            <section class="quiz-area">
+                <div id="quiz-intro" class="quiz-card">
+                    <h2>Select a level to begin</h2>
+                    <p>Choose a category from the left to start your practice session. Each section corresponds to key
+                        areas asked in TCS interviews.</p>
+                    <div class="stats-row">
+                        <div class="stat">
+                            <span class="label">Total Questions</span>
+                            <span class="value">20</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Passing Score</span>
+                            <span class="value">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-question-container" class="quiz-card hidden">
+                    <div class="quiz-header">
+                        <span id="question-category" class="category-badge">Beginner</span>
+                        <span id="question-progress" class="progress-indicator">Question 1/5</span>
+                    </div>
+
+                    <div class="question-content">
+                        <h2 id="question-text">Question text goes here?</h2>
+                        <div id="options-container" class="options-grid">
+                            <!-- Options will be injected here -->
+                        </div>
+                    </div>
+
+                    <div id="feedback-container" class="feedback-box hidden">
+                        <div class="feedback-header">
+                            <span id="result-text">Correct!</span>
+                        </div>
+                        <div class="feedback-body">
+                            <p id="explanation-text"></p>
+                            <div class="example-box">
+                                <strong>💡 Recall Example:</strong>
+                                <p id="example-text"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-footer">
+                        <button id="submit-answer-btn" class="primary-btn">Submit Answer</button>
+                        <button id="next-question-btn" class="primary-btn hidden">Next Question</button>
+                    </div>
+                </div>
+
+                <!-- Summary State -->
+                <div id="quiz-summary" class="quiz-card hidden">
+                    <h2>Session Completed!</h2>
+                    <div class="score-display">
+                        <span id="final-score">0%</span>
+                        <p id="score-message">Great effort! Keep practicing.</p>
+                    </div>
+                    <button id="restart-lvl-btn" class="secondary-btn">Try Again</button>
+                    <button id="back-to-levels-btn" class="primary-btn">Select Another Level</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="content-footer">
+        <p>&copy; 2026 SnakeCode. Your Success, Our Mission.</p>
+    </footer>
+
+    <script src="tcs_python.js"></script>
+</body>
+
+</html>

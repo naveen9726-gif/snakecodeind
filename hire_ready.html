@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeCode - Hire Ready</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="roadmaps.css">
+    <style>
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .company-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .company-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: var(--card-hover);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .company-logo {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .company-name {
+            font-family: var(--font-accent);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+
+        .company-desc {
+            font-family: var(--font-accent);
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .practice-btn {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            padding: 0.7rem 1.8rem;
+            border-radius: 100px;
+            font-family: var(--font-accent);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .company-card:hover .practice-btn {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .coming-soon-card {
+            opacity: 0.4;
+            cursor: not-allowed;
+            filter: grayscale(0.8);
+        }
+
+        .coming-soon-badge {
+            font-family: var(--font-accent);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 12px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-background"></div>
+
+    <nav class="main-nav-bar">
+        <a href="index.html" class="logo">SnakeCode</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="roadmaps.html">Roadmaps</a>
+            <a href="hire_ready.html" class="active">Hire Ready</a>
+        </div>
+    </nav>
+
+    <main class="roadmaps-container">
+        <header class="roadmaps-header">
+            <h1 class="glitch" data-text="Hire Ready">Hire Ready</h1>
+            <p>Targeted interview practice for top tech giants. Master the patterns.</p>
+        </header>
+
+        <section class="company-grid">
+            <a href="python_interview.html" class="company-card">
+                <div class="company-logo">INFOSYS</div>
+                <div class="company-name">Python Interview Practice</div>
+                <p class="company-desc">Master Python fundamentals, DSA, and OOP concepts as per Infosys interview
+                    standards.</p>
+                <div class="practice-btn">Start Training</div>
+            </a>
+
+            <!-- Placeholder for other companies -->
+            <a href="tcs_python.html" class="company-card">
+                <div class="company-logo" style="color: var(--accent-secondary);">TCS</div>
+                <div class="company-name">Python Interview Practice</div>
+                <p class="company-desc">Comprehensive prep for TCS NQT and technical rounds with Python focus.</p>
+                <div class="practice-btn">Start Training</div>
+            </a>
+
+            <div class="company-card coming-soon-card">
+                <span class="coming-soon-badge">Coming Soon</span>
+                <div class="company-logo" style="color: var(--glitch-color-1);">WIPRO</div>
+                <div class="company-name">System Design & Coding</div>
+                <p class="company-desc">Detailed practice for Wipro Elite NLTH and technical interviews.</p>
+                <div class="practice-btn" style="background: var(--text-dim); opacity: 0.5;">Locked</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="content-footer">
+        <p>&copy; 2026 SnakeCode. Built for Success.</p>
+    </footer>
+
+</body>
+
+</html>

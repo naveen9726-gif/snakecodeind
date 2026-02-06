@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeCode - Practice & Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- CodeMirror 5 Editor -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror5/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror5/5.65.2/theme/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror5/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror5/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror5/5.65.2/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror5/5.65.2/addon/edit/closebrackets.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="solve.css">
+    <link rel="stylesheet" href="editor.css">
+</head>
+
+<body>
+    <div class="page-background"></div>
+
+    <nav class="main-nav-bar">
+        <a href="index.html" class="logo">SnakeCode</a>
+        <div class="nav-links">
+            <a href="learn_python.html">Learn</a>
+            <a href="challenges.html">Challenges</a>
+            <a href="solve.html" class="active">Solve</a>
+            <a href="roadmaps.html">Roadmaps</a>
+            <a href="hire_ready.html">Hire Ready</a>
+        </div>
+    </nav>
+
+    <main class="solve-container">
+
+        <!-- Sidebar: Problem List -->
+        <aside class="problem-sidebar">
+            <div class="sidebar-header">
+                <h2>Problem Set</h2>
+                <div class="progress-info">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="total-progress" style="width: 0%"></div>
+                    </div>
+                    <span id="progress-text">0/100 Solved</span>
+                </div>
+            </div>
+
+            <div class="filters">
+                <select id="diff-filter">
+                    <option value="all">All Difficulties</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+                <select id="topic-filter">
+                    <option value="all">All Topics</option>
+                    <option value="Basics">Basics</option>
+                    <option value="Conditionals">Conditionals</option>
+                    <option value="Loops">Loops</option>
+                    <option value="Strings">Strings</option>
+                    <option value="Lists">Lists</option>
+                    <option value="OOP">OOP</option>
+                </select>
+            </div>
+
+            <div id="problem-list" class="problem-list">
+                <!-- Populated by JS -->
+            </div>
+        </aside>
+
+        <!-- Main Area: Problem View -->
+        <section class="problem-workspace">
+
+            <div id="welcome-state" class="workspace-placeholder">
+                <div class="placeholder-content">
+                    <h1>Ready to Code?</h1>
+                    <p>Select a problem from the list to begin your training.</p>
+                </div>
+            </div>
+
+            <div id="active-problem" class="workspace-content hidden">
+                <div class="problem-details-pane">
+                    <header class="detail-header">
+                        <div class="title-row">
+                            <h2 id="p-title">Problem Title</h2>
+                            <span id="p-difficulty" class="badge">Easy</span>
+                        </div>
+                        <span id="p-topic" class="topic-tag">Topic</span>
+                    </header>
+
+                    <div class="detail-body">
+                        <h3>Description</h3>
+                        <p id="p-desc">Description goes here...</p>
+
+                        <h3>Input Format</h3>
+                        <code id="p-input">...</code>
+
+                        <h3>Output Format</h3>
+                        <code id="p-output">...</code>
+                    </div>
+                </div>
+
+                <div class="editor-pane">
+                    <div class="editor-header">
+                        <span>Python 3.10</span>
+                        <div class="editor-controls">
+                            <button id="run-btn" class="secondary-btn">▶ Run</button>
+                            <button id="submit-btn" class="primary-btn">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="code-wrapper">
+                        <div id="solve-editor" class="code-editor-container"></div>
+                    </div>
+
+                    <div class="console-output">
+                        <div class="console-header">Output / Test Results</div>
+                        <div id="console-body" class="console-body">
+                            Run code to see results...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Elite Completion Modal -->
+    <div id="elite-modal" class="modal-overlay hidden">
+        <div class="elite-content">
+            <h1>ELITE STATUS UNLOCKED</h1>
+            <p>You have conquered every challenge.</p>
+            <div class="canvas-wrapper">
+                <canvas id="elite-canvas" width="1200" height="630"></canvas>
+            </div>
+            <div class="modal-actions">
+                <input type="text" id="elite-name" placeholder="Your Name" value="SnakeCoder">
+                <div class="buttons">
+                    <button id="download-elite-btn" class="primary-btn">Download Achievement</button>
+                    <button id="close-modal-btn" class="secondary-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="editor.js"></script>
+    <script src="solve.js"></script>
+</body>
+
+</html>

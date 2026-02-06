@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeCode - Learn Python from Scratch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="learn.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">SnakeCode</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro" class="active">1. Foundation</a></li>
+                <li><a href="#basics">2. Basics</a></li>
+                <li><a href="#control-flow">3. Control Flow</a></li>
+                <li><a href="#data-structures">4. Data Structures</a></li>
+                <li><a href="#functions">5. Functions & Modules</a></li>
+                <li><a href="#oop">6. OOP</a></li>
+                <li><a href="#files">7. File Handling</a></li>
+                <li><a href="#intermediate">8. Intermediate</a></li>
+                <li><a href="#projects">9. Mini Projects</a></li>
+                <li><a href="#career">10. Career Paths</a></li>
+                <li><a href="roadmaps.html">11. Career Roadmaps</a></li>
+                <li><a href="hire_ready.html">12. Hire Ready</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-hero">
+                <h1>Master Python</h1>
+                <p>From absolute zero to coding hero. The journey starts here.</p>
+            </header>
+
+            <!-- Section 1: Foundation -->
+            <section id="intro" class="learning-module">
+                <h2>1. Foundation: The Beginning</h2>
+                <div class="module-content">
+                    <p class="intro-text">Welcome to your first step. This section assumes you have never written a line
+                        of code in your life. We will start from absolute zero.</p>
+
+                    <details>
+                        <summary>1.1 What is Python?</summary>
+                        <div class="lesson-content">
+                            <p><strong>Simple Explanation:</strong> Imagine you want to tell a robot to make a sandwich.
+                                You can't just speak English to it; you need a language it understands. Python is that
+                                language—a bridge between human thought and computer action.</p>
+                            <p>It is a "high-level" programming language, which means it reads very close to English,
+                                unlike older languages that look like complex math.</p>
+
+                            <div class="callout tip">
+                                <span class="callout-title">Why it matters</span>
+                                <p>Python is the #1 language for AI, Data Science, and Automation. It's used by Google,
+                                    NASA, and Netflix. Learning Python is future-proofing your career.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>1.2 Python vs. Other Languages</summary>
+                        <div class="lesson-content">
+                            <p>Why choose Python over C++ or Java? Let's look at how they print "Hello":</p>
+
+                            <h4>Java (Complex)</h4>
+                            <div class="code-block">
+                                <pre><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+}</code></pre>
+                            </div>
+
+                            <h4>Python (Simple)</h4>
+                            <div class="code-block">
+                                <pre><code>print("Hello")</code></pre>
+                            </div>
+
+                            <p>Python removes the clutter so you can focus on <strong>solving problems</strong>, not
+                                fighting with syntax.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>1.3 Setting Up Your Environment</summary>
+                        <div class="lesson-content">
+                            <p>You need two things to write Python code:</p>
+                            <ol>
+                                <li><strong>The Interpreter:</strong> The brain that runs your code. Download from
+                                    python.org.</li>
+                                <li><strong>The Editor (IDE):</strong> Where you write code. We recommend <strong>VS
+                                        Code</strong>.</li>
+                            </ol>
+                        </div>
+                    </details>
+
+                    <details open>
+                        <summary>1.4 Your First Program</summary>
+                        <div class="lesson-content">
+                            <p>Let's write your first script. The tradition is to make the computer say "Hello World".
+                            </p>
+
+                            <h4>The Code</h4>
+                            <div class="code-block">
+                                <div class="code-header"><span>main.py</span> <button class="copy-btn">Copy</button>
+                                </div>
+                                <pre><code>print("Hello, World!")</code></pre>
+                            </div>
+
+                            <h4>How it works:</h4>
+                            <ul>
+                                <li><code>print</code> is a <strong>function</strong> (a built-in command).</li>
+                                <li>The parentheses <code>()</code> tell Python to execute that function.</li>
+                                <li>The quotes <code>""</code> tell Python that <em>Hello, World!</em> is text, not
+                                    code.</li>
+                            </ul>
+
+                            <div class="callout mistake">
+                                <span class="callout-title">Common Mistake</span>
+                                <p> forgetting the quotes! <code>print(Hello)</code> will cause an error because Python
+                                    thinks <em>Hello</em> is a variable name, not text.</p>
+                            </div>
+
+                            <div class="callout practice">
+                                <span class="callout-title">Practice Task</span>
+                                <p>1. Make Python print your name.<br>
+                                    2. Make it print "I am learning Python".</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Section 2: Basics -->
+            <section id="basics" class="learning-module">
+                <h2>2. Python Basics</h2>
+                <div class="module-content">
+                    <p>Now that you can run code, let's learn how to store data. In programming, we use
+                        <strong>Variables</strong>.
+                    </p>
+
+                    <details>
+                        <summary>2.1 Variables & Data Types</summary>
+                        <div class="lesson-content">
+                            <p>Think of a variable as a labeled box. You can put data inside it and look at it later by
+                                using its label.</p>
+
+                            <h4>Creating a Variable</h4>
+                            <div class="code-block">
+                                <div class="code-header"><span>variables.py</span> <button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>player_name = "Snake"
+score = 100</code></pre>
+                            </div>
+                            <p>Here, we created a box named <code>player_name</code> and stored "Snake" in it.</p>
+
+                            <h4>The 4 Main Data Types</h4>
+                            <div class="concept-grid">
+                                <div class="concept-card">
+                                    <h4>String (str)</h4>
+                                    <p>Text wrapped in quotes.</p>
+                                    <code>name = "Alice"</code>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>Integer (int)</h4>
+                                    <p>Whole numbers (no decimals).</p>
+                                    <code>age = 25</code>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>Float</h4>
+                                    <p>Numbers with decimals.</p>
+                                    <code>price = 19.99</code>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>Boolean (bool)</h4>
+                                    <p>True or False only.</p>
+                                    <code>is_game_over = False</code>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>2.2 Input & Output</summary>
+                        <div class="lesson-content">
+                            <p>Programs satisfy a simple flow: <strong>Input -> Process -> Output</strong>.</p>
+
+                            <h4>Getting User Input</h4>
+                            <p>Use the <code>input()</code> function to pause the program and wait for the user to type
+                                something.</p>
+
+                            <div class="code-block">
+                                <div class="code-header"><span>interact.py</span> <button class="copy-btn">Copy</button>
+                                </div>
+                                <pre><code>name = input("What is your name? ")
+print("Hello, " + name)</code></pre>
+                            </div>
+
+                            <div class="callout tip">
+                                <span class="callout-title">Note</span>
+                                <p><code>input()</code> always returns a <strong>String</strong>. If you want a number,
+                                    you must convert it.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>2.3 Type Conversion</summary>
+                        <div class="lesson-content">
+                            <p>Since <code>input()</code> gives you strings, you can't do math on them directly. You
+                                need to convert them.</p>
+
+                            <div class="code-block">
+                                <pre><code>age = input("Enter your age: ") # returns "25" (string)
+age_num = int(age)              # converts to 25 (integer)
+print(age_num + 1)              # Now we can add! Output: 26</code></pre>
+                            </div>
+
+                            <div class="callout mistake">
+                                <span class="callout-title">Common Mistake</span>
+                                <p>Trying <code>print("Your age is " + 25)</code>. You cannot add text to a number
+                                    directly. Use <code>str(25)</code> to fix it.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>2.4 Operators</summary>
+                        <div class="lesson-content">
+                            <p>Symbols that perform operations on variables.</p>
+                            <h4>Arithmetic</h4>
+                            <ul>
+                                <li><code>+</code> Add</li>
+                                <li><code>-</code> Subtract</li>
+                                <li><code>*</code> Multiply</li>
+                                <li><code>/</code> Divide (gives float, e.g. 5/2 = 2.5)</li>
+                                <li><code>//</code> Floor Division (removes decimal, e.g. 5//2 = 2)</li>
+                                <li><code>%</code> Modulus (Remainder, e.g. 5%2 = 1)</li>
+                            </ul>
+
+                            <div class="callout practice">
+                                <span class="callout-title">Practice Task: Age Calculator</span>
+                                <p>Ask the user for their birth year. Subtract it from the current year to calculate
+                                    their age. Print the result.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Section 3: Control Flow -->
+            <section id="control-flow" class="learning-module">
+                <h2>3. Control Flow: Logic Building</h2>
+                <div class="module-content">
+                    <p>Real programs don't just run from top to bottom. They make decisions and repeat tasks. This is
+                        called <strong>Control Flow</strong>.</p>
+
+                    <details>
+                        <summary>3.1 Conditional Statements (If/Else)</summary>
+                        <div class="lesson-content">
+                            <p>We use <code>if</code> statements to run code only when a condition is true.</p>
+
+                            <h4>The Syntax</h4>
+                            <div class="code-block">
+                                <div class="code-header"><span>logic.py</span> <button class="copy-btn">Copy</button>
+                                </div>
+                                <pre><code>age = int(input("How old are you? "))
+
+if age >= 18:
+    print("You are an adult.")
+elif age > 12:
+    print("You are a teenager.")
+else:
+    print("You are a child.")</code></pre>
+                            </div>
+
+                            <h4>Key Keywords:</h4>
+                            <ul>
+                                <li><code>if</code>: Checks the first condition.</li>
+                                <li><code>elif</code>: "Else If" - Checks this if the previous failed.</li>
+                                <li><code>else</code>: Runs if <strong>none</strong> of the above are true.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3.2 Loops (Repetition)</summary>
+                        <div class="lesson-content">
+                            <p>Computers are great at doing boring things millions of times without complaining.</p>
+
+                            <h4>The 'For' Loop</h4>
+                            <p>Used when you know how many times to repeat.</p>
+                            <div class="code-block">
+                                <pre><code># Prints numbers 0, 1, 2, 3, 4
+for i in range(5):
+    print("Count:", i)</code></pre>
+                            </div>
+
+                            <h4>The 'While' Loop</h4>
+                            <p>Used when you want to repeat <em>while</em> a condition is true.</p>
+                            <div class="code-block">
+                                <pre><code>energy = 5
+while energy > 0:
+    print("Running...")
+    energy = energy - 1
+print("Out of energy!")</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3.3 Loop Control & Nested Loops</summary>
+                        <div class="lesson-content">
+                            <p>Sometimes you need to stop a loop early or skip a step.</p>
+                            <ul>
+                                <li><code>break</code>: Exits the loop immediately.</li>
+                                <li><code>continue</code>: Skips the current round and goes to the next.</li>
+                            </ul>
+
+                            <h4>Nested Loops (Loop inside a loop)</h4>
+                            <p>Think of a clock: for every hour, the minute hand loops 60 times.</p>
+                            <div class="code-block">
+                                <pre><code># Print a 3x3 grid of stars
+for row in range(3):
+    line = ""
+    for col in range(3):
+        line += "* "
+    print(line)</code></pre>
+                            </div>
+
+                            <div class="callout practice">
+                                <span class="callout-title">Practice Task: Star Pyramid</span>
+                                <p>Write a program that asks for a number <code>n</code> and prints a pyramid of stars
+                                    with <code>n</code> rows.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Section 4: Data Structures -->
+            <section id="data-structures" class="learning-module">
+                <h2>4. Data Structures</h2>
+                <div class="module-content">
+                    <p>Data Structures are ways to organize and store data efficiently. They are the bread and butter of
+                        programming.</p>
+
+                    <details>
+                        <summary>4.1 Lists (Arrays)</summary>
+                        <div class="lesson-content">
+                            <p>A List is an ordered collection of items. You can change it (mutable).</p>
+
+                            <div class="code-block">
+                                <pre><code>inventory = ["Sword", "Shield", "Potion"]
+
+# Accessing items (Index starts at 0!)
+print(inventory[0]) # Output: Sword
+
+# Adding items
+inventory.append("Map")
+
+# Removing items
+inventory.remove("Shield")
+print(inventory) # ['Sword', 'Potion', 'Map']</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>4.2 Dictionaries (Key-Value)</summary>
+                        <div class="lesson-content">
+                            <p>A real-world dictionary connects a Word to a Definition. In Python, it connects a
+                                <strong>Key</strong> to a <strong>Value</strong>.
+                            </p>
+
+                            <div class="code-block">
+                                <pre><code>student = {
+    "name": "Alex",
+    "score": 95,
+    "passed": True
+}
+
+print(student["name"]) # Output: Alex
+
+# Adding new data
+student["grade"] = "A"</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>4.3 Tuples and Sets</summary>
+                        <div class="lesson-content">
+                            <ul>
+                                <li><strong>Tuple:</strong> Like a list, but cannot be changed after creation
+                                    (Immutable). Uses <code>()</code>. <br><code>coords = (10, 20)</code></li>
+                                <li><strong>Set:</strong> A collection of <em>unique</em> items (no duplicates). Uses
+                                    <code>{}</code>. <br><code>unique_ids = {1, 2, 3}</code>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <div class="callout practice">
+                        <span class="callout-title">Practice Task: Word Counter</span>
+                        <p>Take a sentence as input. Count how many times each word appears using a Dictionary.
+                            <br><em>Hint: <code>sentence.split()</code> creates a list of words.</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Functions -->
+            <section id="functions" class="learning-module">
+                <h2>5. Functions & Modules</h2>
+                <div class="module-content">
+                    <p>Functions let you write code once and use it a million times. They are the building blocks of
+                        clean code.</p>
+
+                    <details>
+                        <summary>5.1 Defining Functions</summary>
+                        <div class="lesson-content">
+                            <p>A function is a block of code that only runs when you call it.</p>
+
+                            <h4>Syntax</h4>
+                            <div class="code-block">
+                                <pre><code>def greet(name):
+    return "Hello, " + name + "!"
+
+# Calling the function
+message = greet("Snake")
+print(message) # Output: Hello, Snake!</code></pre>
+                            </div>
+
+                            <h4>Components:</h4>
+                            <ul>
+                                <li><code>def</code>: Tells Python you are making a function.</li>
+                                <li><code>(name)</code>: Parameter - data the function needs to work.</li>
+                                <li><code>return</code>: Sends the result back to where it was called.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>5.2 Scope & Default Arguments</summary>
+                        <div class="lesson-content">
+                            <p><strong>Scope:</strong> Variables created inside a function stay inside. They are
+                                "local".</p>
+
+                            <h4>Default Arguments</h4>
+                            <p>You can give parameters a default value so they are optional.</p>
+                            <div class="code-block">
+                                <pre><code>def power(number, exponent=2):
+    return number ** exponent
+
+print(power(3))    # 3^2 = 9 (uses default)
+print(power(3, 3)) # 3^3 = 27 (overrides default)</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>5.3 Modules (Importing)</summary>
+                        <div class="lesson-content">
+                            <p>Python comes with "batteries included". Modules are pre-written code files you can use.
+                            </p>
+
+                            <div class="code-block">
+                                <pre><code>import math
+import random
+
+print(math.sqrt(16))      # 4.0
+print(random.randint(1, 6)) # Random dice roll</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <div class="callout practice">
+                        <span class="callout-title">Practice Task: Temperature Converter</span>
+                        <p>Write a function <code>c_to_f(celsius)</code> that returns the Fahrenheit value.
+                            <br><em>Formula: (C * 9/5) + 32</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: OOP -->
+            <section id="oop" class="learning-module">
+                <h2>6. Object-Oriented Programming (OOP)</h2>
+                <div class="module-content">
+                    <p>OOP is a way of structuring code by modeling real-world objects. It is crucial for large
+                        applications.</p>
+
+                    <details>
+                        <summary>6.1 Classes and Objects</summary>
+                        <div class="lesson-content">
+                            <p><strong>Class:</strong> The Blueprint (e.g., "Car Design").<br>
+                                <strong>Object:</strong> The actual thing built from the blueprint (e.g., "That Red
+                                Toyota").
+                            </p>
+
+                            <h4>The Syntax</h4>
+                            <div class="code-block">
+                                <pre><code>class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        return "Woof!"
+
+# Creating Objects
+dog1 = Dog("Buddy", "Golden Retriever")
+dog2 = Dog("Rex", "German Shepherd")
+
+print(dog1.name) # Buddy
+print(dog1.bark()) # Woof!</code></pre>
+                            </div>
+
+                            <div class="callout tip">
+                                <span class="callout-title">The `__init__` Method</span>
+                                <p>This is a special method (Constructor) that automatically runs when you create a new
+                                    object. It sets up the initial variables.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>6.2 Inheritance</summary>
+                        <div class="lesson-content">
+                            <p>Inheritance allows a class to take on the properties of another class. Don't reinvent the
+                                wheel!</p>
+
+                            <div class="code-block">
+                                <pre><code>class Animal:
+    def speak(self):
+        print("Some sound")
+
+class Cat(Animal): # Cat inherits from Animal
+    def speak(self):
+        print("Meow")
+
+c = Cat()
+c.speak() # Meow (It has its own version)</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <div class="callout practice">
+                        <span class="callout-title">Practice Task: Bank System</span>
+                        <p>Create a class <code>BankAccount</code> with methods <code>deposit(amount)</code> and
+                            <code>withdraw(amount)</code>. Keep track of the balance.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: File Handling -->
+            <section id="files" class="learning-module">
+                <h2>7. File Handling & Exceptions</h2>
+                <div class="module-content">
+                    <p>Programs need to save their work. You can't ask users to re-enter data every time.</p>
+
+                    <details>
+                        <summary>7.1 Reading and Writing Files</summary>
+                        <div class="lesson-content">
+                            <p>We use the <code>open()</code> function. Always use <code>with</code> to ensure the file
+                                closes automatically.</p>
+
+                            <h4>Writing to a file</h4>
+                            <div class="code-block">
+                                <pre><code># 'w' mode means Write (Overwrites everything!)
+with open("data.txt", "w") as f:
+    f.write("Level: 5\n")
+    f.write("Score: 2000")</code></pre>
+                            </div>
+
+                            <h4>Reading from a file</h4>
+                            <div class="code-block">
+                                <pre><code># 'r' mode means Read
+with open("data.txt", "r") as f:
+    content = f.read()
+    print(content)</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>7.2 Exception Handling (Try/Except)</summary>
+                        <div class="lesson-content">
+                            <p>Sometimes things break (e.g., file not found, division by zero). Don't let your program
+                                crash!</p>
+
+                            <h4>Syntax</h4>
+                            <div class="code-block">
+                                <pre><code>try:
+    number = int(input("Enter a number: "))
+    print(10 / number)
+
+except ValueError:
+    print("That's not a number!")
+
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+except Exception as e:
+    print(f"Something else went wrong: {e}")</code></pre>
+                            </div>
+
+                            <div class="callout tip">
+                                <span class="callout-title">Pro Tip</span>
+                                <p>Always catch specific errors first. Catching all exceptions with bare
+                                    <code>except:</code> is bad practice because it hides bugs.
+                                </p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Section 8: Intermediate -->
+            <section id="intermediate" class="learning-module">
+                <h2>8. Intermediate Python</h2>
+                <div class="module-content">
+                    <p>Ready to level up? These tools make your code faster and shorter.</p>
+
+                    <details>
+                        <summary>8.1 List Comprehensions</summary>
+                        <div class="lesson-content">
+                            <p>A short, powerful way to create lists.</p>
+
+                            <h4>The Old Way</h4>
+                            <div class="code-block">
+                                <pre><code>squares = []
+for x in range(10):
+    squares.append(x**2)</code></pre>
+                            </div>
+
+                            <h4>The Pythonic Way</h4>
+                            <div class="code-block">
+                                <pre><code>squares = [x**2 for x in range(10)]</code></pre>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>8.2 Lambda Functions</summary>
+                        <div class="lesson-content">
+                            <p>Small, anonymous functions used for simple tasks.</p>
+                            <div class="code-block">
+                                <pre><code># Instead of defining a full function...
+add = lambda x, y: x + y
+
+print(add(5, 3)) # 8</code></pre>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Section 9: Practice Projects -->
+            <section id="projects" class="learning-module highlight-section">
+                <h2>9. Mini Projects: Build to Learn ⭐</h2>
+                <div class="module-content">
+                    <p>The best way to learn is by doing. Try building these projects yourself before looking at the
+                        code.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>🔢 Number Guessing Game</h3>
+                        <p><strong>Goal:</strong> Computer picks a number 1-100. User tries to guess it. Computer says
+                            "Higher" or "Lower".</p>
+                        <details>
+                            <summary>View Solution</summary>
+                            <div class="code-block">
+                                <pre><code>import random
+
+number = random.randint(1, 100)
+guess = None
+
+while guess != number:
+    try:
+        guess = int(input("Guess (1-100): "))
+        
+        if guess < number:
+            print("Higher!")
+        elif guess > number:
+            print("Lower!")
+        else:
+            print("You won!")
+    except ValueError:
+        print("Please enter a number.")</code></pre>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>🔑 Password Generator</h3>
+                        <p><strong>Goal:</strong> Generate a random password with letters, numbers, and symbols.</p>
+                        <details>
+                            <summary>View Solution</summary>
+                            <div class="code-block">
+                                <pre><code>import random
+import string
+
+def generate_password(length=12):
+    chars = string.ascii_letters + string.digits + "!@#$%"
+    password = "".join(random.choice(chars) for _ in range(length))
+    return password
+
+print("Your new password:", generate_password())</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 10: Career -->
+            <section id="career" class="learning-module">
+                <h2>10. What's Next?</h2>
+                <div class="module-content">
+                    <p>You have the basics down. Now, pick a path and specialize.</p>
+                    <div class="career-paths">
+                        <div class="path-card web">
+                            <h3>Web Development</h3>
+                            <p>Build websites and APIs.</p>
+                            <p><strong>Learn:</strong> HTML/CSS, Flask, Django</p>
+                        </div>
+                        <div class="path-card data">
+                            <h3>Data Science & AI</h3>
+                            <p>Analyze data and build models.</p>
+                            <p><strong>Learn:</strong> NumPy, Pandas, PyTorch</p>
+                        </div>
+                        <div class="path-card auto">
+                            <h3>Automation</h3>
+                            <p>Make bots to do boring work.</p>
+                            <p><strong>Learn:</strong> Selenium, BeautifulSoup</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="content-footer">
+                <p>&copy; 2026 SnakeCode. Keep Coding.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="learn.js"></script>
+</body>
+
+</html>
